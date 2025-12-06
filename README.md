@@ -14,3 +14,36 @@
 
 git clone <repo-url>
 cd <repo-folder>
+
+
+2. نصب وابستگی‌ها:
+
+
+go mod tidy
+
+
+3. اجرای پروژه:
+
+go run main.go
+
+
+> نکته: برای SQLite از driver `modernc.org/sqlite` استفاده می‌شود تا بدون CGO روی ویندوز کار کند.
+
+## ساختار پروژه
+
+/data        → فایل CSV کاربران
+/model       → تعریف مدل User
+/service     → منطق پاک‌سازی و اعتبارسنجی
+/middleware  → validation و regex
+/reader      → خواندن CSV
+/err         → تعریف خطاهای سفارشی
+
+
+## License
+
+MIT
+
+
+
+
+
